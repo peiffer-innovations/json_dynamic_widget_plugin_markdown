@@ -12,13 +12,13 @@ const RESOURCES = {
 "manifest.json": "15f73b7e8a8209c2206210b3ac8dea1b",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"assets/NOTICES": "c9e95e8005a4d28e917264a20d667d80",
+"assets/NOTICES": "1409aa401281b81396cb338216579e4f",
 "assets/AssetManifest.json": "52c01f93323aff3e1272629d981ecb4e",
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
 "assets/assets/pages/markdown.json": "09bf15e6426d7e22ecce0dc833f6e648",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"index.html": "a6257456f71b1abc4852d21a18d66f12",
-"/": "a6257456f71b1abc4852d21a18d66f12",
+"index.html": "9bffa5ed31c7e9b7719e32754e5d0407",
+"/": "9bffa5ed31c7e9b7719e32754e5d0407",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796"
 };
 
