@@ -18,8 +18,8 @@ const RESOURCES = {
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
 "assets/assets/pages/markdown.json": "eebcabf9a7f23ef4dbc5d8723d8338b9",
 "flutter.js": "0816e65a103ba8ba51b174eeeeb2cb67",
-"index.html": "060716c4c97315597685c646ddd78154",
-"/": "060716c4c97315597685c646ddd78154",
+"index.html": "7f22e63ecb9304e324dbf25924a2bed5",
+"/": "7f22e63ecb9304e324dbf25924a2bed5",
 "manifest.json": "15f73b7e8a8209c2206210b3ac8dea1b"
 };
 
