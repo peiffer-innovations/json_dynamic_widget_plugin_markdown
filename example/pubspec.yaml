@@ -1,34 +1,27 @@
-name: example
-description: Example app for the JsonDynamicWidget library
+name: 'example'
+description: 'Example app for the JsonDynamicWidget library'
+publish_to: 'none'
+version: '1.0.0+2'
 
-publish_to: "none"
+environment: 
+  sdk: '>=2.17.0 <3.0.0'
 
-version: 1.0.0+1
+dependencies: 
+  flutter: 
+    sdk: 'flutter'
+  http: '^0.13.5'
+  json_dynamic_widget_plugin_markdown: 
+    path: '../'
 
-environment:
-  sdk: ">=2.17.0 <3.0.0"
+dev_dependencies: 
+  flutter_test: 
+    sdk: 'flutter'
 
-dependencies:
-  flutter:
-    sdk: flutter
-  http: ^0.13.4
-  json_dynamic_widget_plugin_markdown:
-    path: ../
 
-# dependency_overrides:
-#   json_class:
-#     path: ../../json_class
-#   json_dynamic_widget:
-#     path: ../../json_dynamic_widget
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-flutter:
+flutter: 
   uses-material-design: true
-  assets:
-    - assets/pages/
+  assets: 
+    - 'assets/pages/'
 
 ignore_updates: 
   - 'archive'
