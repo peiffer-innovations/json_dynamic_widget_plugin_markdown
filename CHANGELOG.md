@@ -1,3 +1,8 @@
+## [4.0.0] - September 19th, 2022
+
+* **BREAKING**: Updated to Markdown 6.0.0
+
+
 ## [3.0.0+10] - August 9, 2022
 
 * Automated dependency updates

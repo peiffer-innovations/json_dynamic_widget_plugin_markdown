@@ -228,6 +228,17 @@ class JsonMarkdownDecoder {
           result = md.CodeSyntax();
           break;
 
+        case 'delimiter':
+          result = md.DelimiterSyntax(
+            map['pattern'].toString(),
+            allowIntraWord: JsonClass.parseBool(map['allowIntraWord']),
+            requiresDelimiterRun: JsonClass.parseBool(
+              map['requiresDelimiterRun'],
+            ),
+            startCharacter: JsonClass.parseInt(map['startCharacter']),
+          );
+          break;
+
         case 'email':
           result = md.EmailAutolinkSyntax();
           break;
@@ -242,17 +253,6 @@ class JsonMarkdownDecoder {
 
         case 'line_break':
           result = md.LineBreakSyntax();
-          break;
-
-        case 'tag':
-          result = md.TagSyntax(
-            map['pattern'].toString(),
-            allowIntraWord: JsonClass.parseBool(map['allowIntraWord']),
-            requiresDelimiterRun: JsonClass.parseBool(
-              map['requiresDelimiterRun'],
-            ),
-            startCharacter: JsonClass.parseInt(map['startCharacter']),
-          );
           break;
 
         case 'text':
