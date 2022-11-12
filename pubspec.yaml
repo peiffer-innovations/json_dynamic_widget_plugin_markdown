@@ -3,17 +3,16 @@ description: 'A plugin to the JSON Dynamic Widget to provide support for Markdow
 homepage: 'https://github.com/peiffer-innovations/json_dynamic_widget_plugin_markdown'
 version: '4.0.0+8'
 
-environment: 
-  sdk: '>=2.17.0 <3.0.0'
+environment:
+  sdk: '>=2.18.0 <3.0.0'
 
-analyzer: 
-  exclude: 
+analyzer:
+  exclude:
     - 'lib/generated/**'
 
-
-dependencies: 
+dependencies:
   child_builder: '^2.0.0+3'
-  flutter: 
+  flutter:
     sdk: 'flutter'
   flutter_markdown: '^0.6.13'
   intl: '^0.17.0'
@@ -25,15 +24,14 @@ dependencies:
   meta: '^1.7.0'
   uuid: '^3.0.6'
 
-false_secrets: 
+false_secrets:
   - 'example/web/index.html'
 
-dev_dependencies: 
-  flutter_test: 
+dev_dependencies:
+  flutter_test:
     sdk: 'flutter'
 
-
-ignore_updates: 
+ignore_updates:
   - 'archive'
   - 'async'
   - 'boolean_selector'
