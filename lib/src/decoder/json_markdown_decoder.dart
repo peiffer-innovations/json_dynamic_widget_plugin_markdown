@@ -40,55 +40,55 @@ class JsonMarkdownDecoder {
       ));
       switch (map) {
         case 'blockquote':
-          result = md.BlockquoteSyntax();
+          result = const md.BlockquoteSyntax();
           break;
 
         case 'code':
-          result = md.CodeBlockSyntax();
+          result = const md.CodeBlockSyntax();
           break;
 
         case 'empty':
-          result = md.EmptyBlockSyntax();
+          result = const md.EmptyBlockSyntax();
           break;
 
         case 'fenced_code':
-          result = md.FencedCodeBlockSyntax();
+          result = const md.FencedCodeBlockSyntax();
           break;
 
         case 'header':
-          result = md.HeaderSyntax();
+          result = const md.HeaderSyntax();
           break;
 
         case 'horizontal_rule':
-          result = md.HorizontalRuleSyntax();
+          result = const md.HorizontalRuleSyntax();
           break;
 
         case 'html':
-          result = md.BlockTagBlockHtmlSyntax();
+          result = const md.BlockTagBlockHtmlSyntax();
           break;
 
         case 'ordered_list':
-          result = md.OrderedListSyntax();
+          result = const md.OrderedListSyntax();
           break;
 
         case 'paragraph':
-          result = md.ParagraphSyntax();
+          result = const md.ParagraphSyntax();
           break;
 
         case 'setext_header':
-          result = md.SetextHeaderSyntax();
+          result = const md.SetextHeaderSyntax();
           break;
 
         case 'setext_header_with_id':
-          result = md.SetextHeaderWithIdSyntax();
+          result = const md.SetextHeaderWithIdSyntax();
           break;
 
         case 'table':
-          result = md.TableSyntax();
+          result = const md.TableSyntax();
           break;
 
         case 'unordered_list':
-          result = md.UnorderedListSyntax();
+          result = const md.UnorderedListSyntax();
           break;
 
         default:
@@ -214,7 +214,7 @@ class JsonMarkdownDecoder {
         validate: validate,
       ));
 
-      var type = map['type'];
+      final type = map['type'];
       switch (type) {
         case 'autolink':
           result = md.AutolinkSyntax();

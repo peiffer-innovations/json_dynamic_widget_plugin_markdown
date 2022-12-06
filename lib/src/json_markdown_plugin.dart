@@ -6,14 +6,14 @@ import 'schema/json_markdown_schemas.dart';
 
 class JsonMarkdownPlugin {
   static void bind(JsonWidgetRegistry registry) {
-    var schemaCache = SchemaCache();
+    final schemaCache = SchemaCache();
     Enums.all.addAll(JsonMarkdownSchemas.enums.keys);
 
     schemaCache.addSchemas(JsonMarkdownSchemas.enums);
     schemaCache.addSchemas(JsonMarkdownSchemas.objects);
 
     registry.registerCustomBuilders({
-      MarkdownBuilder.type: JsonWidgetBuilderContainer(
+      MarkdownBuilder.type: const JsonWidgetBuilderContainer(
         builder: MarkdownBuilder.fromDynamic,
         schemaId: MarkdownSchema.id,
       ),

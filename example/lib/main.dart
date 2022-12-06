@@ -42,15 +42,15 @@ void main() async {
     });
   }
 
-  var navigatorKey = GlobalKey<NavigatorState>();
+  final navigatorKey = GlobalKey<NavigatorState>();
 
-  var registry = JsonWidgetRegistry.instance;
+  final registry = JsonWidgetRegistry.instance;
 
   JsonMarkdownPlugin.bind(registry);
 
   registry.navigatorKey = navigatorKey;
 
-  var templates = {
+  final templates = {
     'json_dynamic_widget':
         'https://raw.githubusercontent.com/peiffer-innovations/json_dynamic_widget/main/README.md',
     'json_dynamic_widget_plugin_charts_flutter':
@@ -114,12 +114,12 @@ class HomePageState extends State<HomePage> {
     }
 
     try {
-      var response = await http.get(Uri.parse(url));
-      var md = response.body;
+      final response = await http.get(Uri.parse(url));
+      final md = response.body;
 
-      var registry = JsonWidgetRegistry.instance.copyWith();
+      final registry = JsonWidgetRegistry.instance.copyWith();
       try {
-        var data = JsonWidgetData.fromDynamic(
+        final data = JsonWidgetData.fromDynamic(
           json.decode(
               await rootBundle.loadString('assets/pages/markdown.json')),
           registry: registry,
@@ -147,11 +147,11 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Markdown Widget'),
+        title: const Text('Markdown Widget'),
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
-          var entry = _templates[index];
+          final entry = _templates[index];
           return Stack(
             children: [
               ListTile(
@@ -161,7 +161,7 @@ class HomePageState extends State<HomePage> {
                 title: Text(entry.key),
               ),
               if (_loading == index)
-                Positioned(
+                const Positioned(
                   bottom: 0.0,
                   left: 0.0,
                   right: 0.0,
