@@ -4,7 +4,7 @@ homepage: 'https://github.com/peiffer-innovations/json_dynamic_widget_plugin_mar
 version: '4.0.1'
 
 environment:
-  sdk: '>=2.19.0 <3.0.0'
+  sdk: '>=2.19.0 <4.0.0'
 
 analyzer:
   exclude:
