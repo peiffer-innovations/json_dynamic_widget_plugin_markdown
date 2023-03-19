@@ -22,7 +22,7 @@ jobs:
           repository: peiffer-innovations/flutter_json_schemas
           token: ${{ secrets.REPO_TOKEN }}
           fetch-depth: 0
-          ref: gh-pages
+          ref: main
           path: schemas
 
       - name: Update Schemas
@@ -36,7 +36,7 @@ jobs:
           cd schemas
           git add .
           git commit --allow-empty -m "json_dynamic_widget_plugin_markdown: schema update"
-          git push origin HEAD:gh-pages
+          git push origin HEAD:main
           cd ..
 
       - name: Publish

@@ -8,6 +8,7 @@ class MarkdownSchema {
   static final schema = {
     r'$schema': 'http://json-schema.org/draft-06/schema#',
     r'$id': '$id',
+    r'$children': 0,
     r'$comment':
         'https://pub.dev/documentation/flutter_markdown/latest/flutter_markdown/Markdown-class.html',
     'title': 'Markdown',
