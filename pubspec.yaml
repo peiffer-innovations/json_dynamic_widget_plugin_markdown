@@ -4,11 +4,12 @@ homepage: 'https://github.com/peiffer-innovations/json_dynamic_widget_plugin_mar
 version: '4.0.1+2'
 
 environment:
-  sdk: '>=2.19.0 <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 analyzer:
   exclude:
     - 'lib/generated/**'
+    - 'lib/**/*.g.dart'
 
 dependencies:
   child_builder: '^2.0.1'
@@ -21,7 +22,7 @@ dependencies:
   json_theme: '^5.0.0+2'
   logging: '^1.1.1'
   markdown: '^6.0.1'
-  meta: '^1.8.0'
+  meta: '^1.9.0'
   uuid: '^3.0.7'
 
 false_secrets:
