@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:json_class/json_class.dart';
 import 'package:json_theme/json_theme.dart';
-import 'package:json_theme/json_theme_schemas.dart';
 import 'package:markdown/markdown.dart' as md;
 
 class JsonMarkdownDecoder {

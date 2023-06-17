@@ -13,7 +13,7 @@ class JsonMarkdownPlugin {
     schemaCache.addSchemas(JsonMarkdownSchemas.objects);
 
     registry.registerCustomBuilders({
-      MarkdownBuilder.type: const JsonWidgetBuilderContainer(
+      MarkdownBuilder.kType: const JsonWidgetBuilderContainer(
         builder: MarkdownBuilder.fromDynamic,
         schemaId: MarkdownSchema.id,
       ),

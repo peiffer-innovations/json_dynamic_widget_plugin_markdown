@@ -35,7 +35,7 @@ class MarkdownBuilder extends JsonWidgetBuilder {
   }) : super(numSupportedChildren: kNumSupportedChildren);
 
   static const kNumSupportedChildren = 0;
-  static const type = 'markdown';
+  static const kType = 'markdown';
 
   final List<md.BlockSyntax>? blockSyntaxes;
   final Map<String, MarkdownElementBuilder>? builders;
