@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:json_dynamic_widget_plugin_markdown/src/schema/json_markdown_schemas.dart';
+import 'package:json_dynamic_widget_plugin_markdown/json_dynamic_widget_plugin_markdown.dart';
 
 void main() {
   test('output', () async {
@@ -13,9 +13,9 @@ void main() {
 
     output.createSync(recursive: true);
 
-    final encoder = const JsonEncoder.withIndent('  ');
+    const encoder = JsonEncoder.withIndent('  ');
     final all = [
-      ...JsonMarkdownSchemas.objects.values,
+      ...JsonMarkdownPluginRegistrar.registerDefaults().schemas.values,
     ];
     for (var schema in all) {
       for (var i = 0; i < 3; i++) {

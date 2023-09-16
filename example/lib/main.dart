@@ -1,12 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
 import 'package:json_dynamic_widget_plugin_markdown/json_dynamic_widget_plugin_markdown.dart';
-import 'package:json_theme/json_theme_schemas.dart';
 import 'package:logging/logging.dart';
 
 void main() async {
@@ -46,7 +43,7 @@ void main() async {
 
   final registry = JsonWidgetRegistry.instance;
 
-  JsonMarkdownPlugin.bind(registry);
+  JsonMarkdownPluginRegistrar.registerDefaults(registry: registry);
 
   registry.navigatorKey = navigatorKey;
 
@@ -85,7 +82,7 @@ void main() async {
 }
 
 class HomePage extends StatefulWidget {
-  HomePage({
+  const HomePage({
     Key? key,
     required this.templates,
   }) : super(key: key);
@@ -123,15 +120,17 @@ class HomePageState extends State<HomePage> {
           json.decode(
               await rootBundle.loadString('assets/pages/markdown.json')),
           registry: registry,
-        )!;
+        );
         registry.setValue('title', title);
         registry.setValue('data', md);
 
-        await Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (_) => JsonWidgetPage(data: data),
-          ),
-        );
+        if (mounted) {
+          await Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => JsonWidgetPage(data: data),
+            ),
+          );
+        }
       } finally {
         registry.dispose();
       }
@@ -177,7 +176,7 @@ class HomePageState extends State<HomePage> {
 }
 
 class JsonWidgetPage extends StatelessWidget {
-  JsonWidgetPage({
+  const JsonWidgetPage({
     Key? key,
     required this.data,
   }) : super(key: key);

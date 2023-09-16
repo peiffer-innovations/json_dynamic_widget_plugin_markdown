@@ -1,3 +1,8 @@
+## [5.0.0] - September 16th, 2023
+
+* Updated to use [json_dynamic_widget](https://pub.dev/packages/json_dynamic_widget) version `7.0.0` and updated for code generation.
+
+
 ## [4.0.2] - June 17th, 2023
 
 * Dart 3.0

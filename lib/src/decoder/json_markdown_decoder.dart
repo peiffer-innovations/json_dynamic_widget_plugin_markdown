@@ -63,7 +63,7 @@ class JsonMarkdownDecoder {
           break;
 
         case 'html':
-          result = const md.BlockTagBlockHtmlSyntax();
+          result = const md.HtmlBlockSyntax();
           break;
 
         case 'ordered_list':
