@@ -1,7 +1,7 @@
 name: 'json_dynamic_widget_plugin_markdown'
 description: 'A plugin to the JSON Dynamic Widget to provide support for Markdown'
 homepage: 'https://github.com/peiffer-innovations/json_dynamic_widget_plugin_markdown'
-version: '5.0.0+11'
+version: '5.0.0+12'
 
 environment: 
   sdk: '>=3.0.0 <4.0.0'
@@ -15,7 +15,7 @@ dependencies:
   child_builder: '^2.0.2'
   flutter: 
     sdk: 'flutter'
-  flutter_markdown: '^0.6.18+3'
+  flutter_markdown: '^0.6.19'
   intl: '^0.19.0'
   json_class: '^3.0.0+12'
   json_dynamic_widget: '^7.0.6+5'
