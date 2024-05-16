@@ -22,7 +22,7 @@ dependencies:
   json_theme: '^6.4.0'
   logging: '^1.2.0'
   markdown: '^7.2.1'
-  meta: '^1.9.1'
+  meta: '^1.12.0'
   uuid: '^4.3.3'
 
 false_secrets: 
