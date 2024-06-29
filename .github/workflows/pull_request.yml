@@ -14,3 +14,5 @@ jobs:
 
       - name: Validate
         uses: peiffer-innovations/actions-flutter-validate@v2
+        with:
+          generate_code: true        
