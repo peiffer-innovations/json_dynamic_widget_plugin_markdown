@@ -343,6 +343,56 @@ class JsonMarkdownDecoder {
     return result;
   }
 
+  static TableCellVerticalAlignment? decodeTableCellVerticalAlignment(
+    dynamic map, {
+    bool validate = false,
+  }) {
+    TableCellVerticalAlignment? result;
+
+    if (result is TableCellVerticalAlignment) {
+      result = map;
+    } else if (map != null) {
+      assert(SchemaValidator.validate(
+        schemaId: '$_baseSchemaUrl/table_cell_vertical_alignment',
+        value: map,
+        validate: validate,
+      ));
+
+      switch (map) {
+        case 'baseline':
+          result = TableCellVerticalAlignment.baseline;
+          break;
+
+        case 'bottom':
+          result = TableCellVerticalAlignment.bottom;
+          break;
+
+        case 'fill':
+          result = TableCellVerticalAlignment.fill;
+          break;
+
+        case 'intrinsicHeight':
+          result = TableCellVerticalAlignment.intrinsicHeight;
+          break;
+
+        case 'middle':
+          result = TableCellVerticalAlignment.middle;
+          break;
+
+        case 'top':
+          result = TableCellVerticalAlignment.top;
+          break;
+
+        default:
+          throw Exception(
+            '[decodeTableCellVerticalAlignment]: unknown map encountered: [$map]',
+          );
+      }
+    }
+
+    return result;
+  }
+
   /// Decodes the object from a Map-like dynamic structure.  This expects the
   /// JSON format to be of the following structure:
   ///
@@ -388,6 +438,7 @@ class JsonMarkdownDecoder {
   ///   "p": <TextStyle>,
   ///   "pPadding": <EdgeInsetsGeometry>,
   ///   "strong": <TextStyle>,
+  ///   "superscriptFontFeatureTag": <String>,
   ///   "tableBody": <TextStyle>,
   ///   "tableBorder": <TableBorder>,
   ///   "tableCellsDecoration": <BoxDecoration>,
@@ -395,8 +446,10 @@ class JsonMarkdownDecoder {
   ///   "tableColumnWidth": <TableColumnWidth>,
   ///   "tableHead": <TextStyle>,
   ///   "tableHeadAlign": <TextAlign>,
+  ///   "tablePadding": <EdgeInsetsGeometry>,
+  ///   "tableVerticalAlignment": <TableCellVerticalAlignment>,
   ///   "textAlign": <WrapAlignment>,
-  ///   "textScaleFactor": <double>,
+  ///   "textScaler": <TextScaler>,
   ///   "unorderedListAlign": <WrapAlignment>
   /// }
   /// ```
@@ -574,6 +627,7 @@ class JsonMarkdownDecoder {
           map['strong'],
           validate: false,
         ),
+        superscriptFontFeatureTag: map['superscriptFontFeatureTag'],
         tableBody: ThemeDecoder.decodeTextStyle(
           map['tableBody'],
           validate: false,
@@ -602,12 +656,21 @@ class JsonMarkdownDecoder {
           map['tableHeadAlign'],
           validate: false,
         ),
+        tablePadding: ThemeDecoder.decodeEdgeInsetsGeometry(
+          map['tablePadding'],
+          validate: false,
+        ) as EdgeInsets?,
+        tableVerticalAlignment: decodeTableCellVerticalAlignment(
+              map['tableVerticalAlignment'],
+              validate: false,
+            ) ??
+            TableCellVerticalAlignment.middle,
         textAlign: ThemeDecoder.decodeWrapAlignment(
               map['textAlign'],
               validate: false,
             ) ??
             WrapAlignment.start,
-        textScaleFactor: JsonClass.parseDouble(map['textScaleFactor']),
+        textScaler: map['textScaler'],
         unorderedListAlign: ThemeDecoder.decodeWrapAlignment(
               map['textAlign'],
               validate: false,
