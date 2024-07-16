@@ -1,7 +1,7 @@
 name: 'json_dynamic_widget_plugin_markdown'
 description: 'A plugin to the JSON Dynamic Widget to provide support for Markdown'
 homepage: 'https://github.com/peiffer-innovations/json_dynamic_widget_plugin_markdown'
-version: '5.0.0+15'
+version: '5.0.0+16'
 
 environment: 
   sdk: '>=3.0.0 <4.0.0'
@@ -23,7 +23,7 @@ dependencies:
   logging: '^1.2.0'
   markdown: '^7.2.2'
   meta: '^1.12.0'
-  uuid: '^4.4.0'
+  uuid: '^4.4.2'
 
 false_secrets: 
   - 'example/web/index.html'
