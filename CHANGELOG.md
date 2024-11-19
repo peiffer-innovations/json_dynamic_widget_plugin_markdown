@@ -1,3 +1,8 @@
+## [5.0.0+17] - November 19, 2024
+
+* Automated dependency updates
+
+
 ## [5.0.0+16] - July 16, 2024
 
 * Automated dependency updates
