@@ -83,9 +83,9 @@ void main() async {
 
 class HomePage extends StatefulWidget {
   const HomePage({
-    Key? key,
+    super.key,
     required this.templates,
-  }) : super(key: key);
+  });
 
   final Map<String, String> templates;
 
@@ -177,9 +177,9 @@ class HomePageState extends State<HomePage> {
 
 class JsonWidgetPage extends StatelessWidget {
   const JsonWidgetPage({
-    Key? key,
+    super.key,
     required this.data,
-  }) : super(key: key);
+  });
 
   final JsonWidgetData data;
 

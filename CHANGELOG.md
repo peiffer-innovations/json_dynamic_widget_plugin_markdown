@@ -1,3 +1,8 @@
+## [5.0.1] - November 30th, 2024
+
+* Widened `intl` because for some reason the refuse to 1.0.0
+
+
 ## [5.0.0+17] - November 30, 2024
 
 * Automated dependency updates
