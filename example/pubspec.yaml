@@ -1,71 +1,71 @@
-name: 'example'
-description: 'Example app for the JsonDynamicWidget library'
-publish_to: 'none'
-version: '1.0.0+15'
+name: "example"
+description: "Example app for the JsonDynamicWidget library"
+publish_to: "none"
+version: "1.0.0+16"
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
-    sdk: 'flutter'
-  http: '^1.2.2'
-  json_dynamic_widget: '^7.3.1+13'
+    sdk: "flutter"
+  http: "^1.3.0"
+  json_dynamic_widget: "^9.0.0+1"
   json_dynamic_widget_plugin_markdown:
-    path: '../'
-  logging: '^1.3.0'
+    path: "../"
+  logging: "^1.3.0"
 
 dev_dependencies:
   flutter_test:
-    sdk: 'flutter'
+    sdk: "flutter"
 
 flutter:
   uses-material-design: true
   assets:
-    - 'assets/pages/'
+    - "assets/pages/"
 
 permittedLicenses:
-  - 'Apache-2.0'
-  - 'BSD-2-Clause'
-  - 'BSD-3-Clause'
-  - 'MIT'
-  - 'MIT-Modern-Variant'
-  - 'MPL-2.0'
-  - 'Zlib'
+  - "Apache-2.0"
+  - "BSD-2-Clause"
+  - "BSD-3-Clause"
+  - "MIT"
+  - "MIT-Modern-Variant"
+  - "MPL-2.0"
+  - "Zlib"
 
 packageLicenseOverride:
-  flutter: 'BSD-3-Clause'
-  flutter_driver: 'BSD-3-Clause'
-  flutter_goldens: 'BSD-3-Clause'
-  flutter_localizations: 'BSD-3-Clause'
-  flutter_web_plugins: 'BSD-3-Clause'
-  flutter_test: 'BSD-3-Clause'
-  fuchsia_remote_debug_protocol: 'BSD-3-Clause'
-  integration_test: 'BSD-3-Clause'
-  rxdart: 'Apache-2.0'
+  flutter: "BSD-3-Clause"
+  flutter_driver: "BSD-3-Clause"
+  flutter_goldens: "BSD-3-Clause"
+  flutter_localizations: "BSD-3-Clause"
+  flutter_web_plugins: "BSD-3-Clause"
+  flutter_test: "BSD-3-Clause"
+  fuchsia_remote_debug_protocol: "BSD-3-Clause"
+  integration_test: "BSD-3-Clause"
+  rxdart: "Apache-2.0"
 
 ignore_updates:
-  - 'archive'
-  - 'async'
-  - 'boolean_selector'
-  - 'characters'
-  - 'charcode'
-  - 'collection'
-  - 'clock'
-  - 'crypto'
-  - 'fake_async'
-  - 'file'
-  - 'matcher'
-  - 'material_color_utilities'
-  - 'meta'
-  - 'path'
-  - 'source_span'
-  - 'stack_trace'
-  - 'stream_channel'
-  - 'string_scanner'
-  - 'sync_http'
-  - 'term_glyph'
-  - 'test_api'
-  - 'typed_data'
-  - 'vector_math'
-  - 'webdriver'
+  - "archive"
+  - "async"
+  - "boolean_selector"
+  - "characters"
+  - "charcode"
+  - "collection"
+  - "clock"
+  - "crypto"
+  - "fake_async"
+  - "file"
+  - "matcher"
+  - "material_color_utilities"
+  - "meta"
+  - "path"
+  - "source_span"
+  - "stack_trace"
+  - "stream_channel"
+  - "string_scanner"
+  - "sync_http"
+  - "term_glyph"
+  - "test_api"
+  - "typed_data"
+  - "vector_math"
+  - "webdriver"
