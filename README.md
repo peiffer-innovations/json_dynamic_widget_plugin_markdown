@@ -1,3 +1,8 @@
+**ARCHIVED**
+
+Per the official deprecation of [flutter_markdown](https://pub.dev/packages/flutter_markdown) this package is now archived and will no longer be updated.  If someone would like to take over for maintaining markdown support via a plugin using a replacement package to `flutter_markdown`, that'd be great.
+
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
